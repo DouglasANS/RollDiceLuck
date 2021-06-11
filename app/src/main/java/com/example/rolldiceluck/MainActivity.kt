@@ -1,13 +1,14 @@
 package com.example.rolldiceluck
 
 import android.content.Intent
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +18,14 @@ class MainActivity : AppCompatActivity() {
         val imgDado1 = findViewById<ImageView>(R.id.imgDado1)
         val imgDado2 = findViewById<ImageView>(R.id.imgDado2)
         val button = findViewById<Button>(R.id.button);
+        val text = findViewById<TextView>(R.id.welcomeMessage)
+        val shareButton = findViewById<FloatingActionButton>(R.id.share)
+
+        val player = intent.getStringExtra("playername")
+
+        val message = getString(R.string.welcome, player)
+
+        text.text = message
 
         val imagens = listOf(R.drawable.dice_1, R.drawable.dice_2, R.drawable.dice_3, R.drawable.dice_4, R.drawable.dice_5, R.drawable.dice_6)
 
@@ -25,7 +34,25 @@ class MainActivity : AppCompatActivity() {
             imgDado2.setImageResource(imagens.random())
         }
 
-        Log.i("Ciclo de vida", "on Create")
+        shareButton.setOnClickListener{
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.putExtra(Intent.EXTRA_TEXT, "Você é sortudo!")
+            intent.setPackage("com.whatsapp") /*Se não tiver zap vai dar crash, acha o id no googleplay*/
+            intent.type = "text/plain"
+
+
+            if(intent.resolveActivity(this.packageManager) != null){
+                startActivity(intent)
+            }else{
+                Toast.makeText(this, "Você não tem o app instalado", Toast.LENGTH_LONG).show()
+                /*startActivity(parametro da loja caso não tenha o app no cell)*/
+                /*O zap tem que ter um Send no androidmanifest pra receber o texto, torcer pra que tenha*/
+            }
+
+
+        }
+
+
     }
 
     override fun onStart() {

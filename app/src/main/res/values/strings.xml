@@ -2,5 +2,7 @@
     <string name="app_name">RollDiceLuck</string>
     <string name="dado1">Dado1</string>
     <string name="dado2">Dado2</string>
+    <string name="name">Name</string>
     <string name="Play">Play</string>
+    <string name="welcome">Welcome %s</string>
 </resources>
