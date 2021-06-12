@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/registerUserFragment">
+
+    <fragment
+        android:id="@+id/registerUserFragment"
+        android:name="com.example.rolldiceluck.RegisterUserFragment"
+        android:label="fragment_register_user"
+        tools:layout="@layout/fragment_register_user" >
+        <action
+            android:id="@+id/action_registerUserFragment_to_playFragment"
+            app:destination="@id/playFragment" >
+            <argument
+                android:name="PlayerName"
+                android:defaultValue="asd" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/playFragment"
+        android:name="com.example.rolldiceluck.PlayFragment"
+        android:label="PlayFragment" >
+        <argument
+            android:name="PlayerName"
+            app:argType="string"
+            android:defaultValue="JogadorDefault" />
+    </fragment>
+</navigation>
