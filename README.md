@@ -11,6 +11,5 @@ Roll Dice Luck
       3.4 Cria uma solução para enviar os dados do jogador para outra tela;  <br />
       3.5 Implementação extra - Salvar esses dados de acordo com o jogador(criar um histórico). <br />
 
- <h2>Etapa - 1 </h2>
 
 ![](img/3mvp.png)
