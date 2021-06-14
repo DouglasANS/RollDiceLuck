@@ -13,4 +13,4 @@ Roll Dice Luck
 
  <h2>Etapa - 1 </h2>
 
-![](img/etapa01.png)
+![](img/3mvp.png)
