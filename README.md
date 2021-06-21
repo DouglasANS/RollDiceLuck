@@ -2,14 +2,12 @@
 
 Roll Dice Luck
 
-1 - Tem como objetivo descobrir quem é a pessoa mais sortuda atraves de valores randomicos.  <br />
-2 - O desenvolvendo um app que gera 2 valores de 1 a 6 de forna randômica.  <br />
+1 - Tem aplicativo tem como p objetivo descobrir quem é a pessoa mais sortuda atraves de valores randomicos do dado.  <br />
+2 - O funcionalidade da app gera 2 valores entre 1 e 6 de forma randômica e gera a soma dos valores.  <br />
 3 -    <br />
-      3.1 Criar uma tela que gera valores randomicamente e um botão para parar os valores;  <br />
-      3.2 Desenvolve a parte gráfica;  <br />
-      3.3 Cria uma tela inicial que introduz o app;  <br />
-      3.4 Cria uma solução para enviar os dados do jogador para outra tela;  <br />
-      3.5 Implementação extra - Salvar esses dados de acordo com o jogador(criar um histórico). <br />
+      3.1 A primeira tela tem um Splash Screen  <br />
+      3.2 A segunda pede o nome do jogador, mas que se não por ele impede a mudança de tela ate que tenha o nome escrito;  <br />
+      3.3 A terceira e ultima tela mostra a interface e a funcionalidade que é mostrar dois numeros randomicos e mostrar na tela a soma dos dados.  <br />
 
 
-![](img/3mvp.png)
+![](img/RollDiceLuck.png)
