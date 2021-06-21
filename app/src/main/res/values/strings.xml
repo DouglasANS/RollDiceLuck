@@ -8,4 +8,7 @@
     <string name="welcome">Welcome %s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="avan_ar">Avançar</string>
+    <string name="rolldiceluck">RollDiceLuck</string>
+    <string name="textview">TextView</string>
 </resources>
